@@ -20,6 +20,9 @@
 		E1DA59A026525D89009CE8A0 /* CRSecondaryTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA599F26525D89009CE8A0 /* CRSecondaryTitleLabel.swift */; };
 		E1DA59A626525E37009CE8A0 /* CRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59A526525E37009CE8A0 /* CRButton.swift */; };
 		E1DA59B02652638F009CE8A0 /* CRFlagImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59AF2652638F009CE8A0 /* CRFlagImageView.swift */; };
+		E1DA59B5265265B4009CE8A0 /* CRAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59B4265265B4009CE8A0 /* CRAlertView.swift */; };
+		E1DA59BD265265CD009CE8A0 /* CRAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59BC265265CD009CE8A0 /* CRAlertVC.swift */; };
+		E1DA59C62652666A009CE8A0 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59C52652666A009CE8A0 /* UIViewController+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		E1DA599F26525D89009CE8A0 /* CRSecondaryTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRSecondaryTitleLabel.swift; sourceTree = "<group>"; };
 		E1DA59A526525E37009CE8A0 /* CRButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRButton.swift; sourceTree = "<group>"; };
 		E1DA59AF2652638F009CE8A0 /* CRFlagImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRFlagImageView.swift; sourceTree = "<group>"; };
+		E1DA59B4265265B4009CE8A0 /* CRAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRAlertView.swift; sourceTree = "<group>"; };
+		E1DA59BC265265CD009CE8A0 /* CRAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRAlertVC.swift; sourceTree = "<group>"; };
+		E1DA59C52652666A009CE8A0 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 		E1DA593626524EA3009CE8A0 /* CurrencyRateTestForMKB */ = {
 			isa = PBXGroup;
 			children = (
+				E1DA59C42652666A009CE8A0 /* Extensions */,
 				E1DA598826525C0C009CE8A0 /* Custom Views */,
 				E1DA598726525BB5009CE8A0 /* Alerts */,
 				E1DA598126525944009CE8A0 /* Services */,
@@ -159,6 +166,8 @@
 		E1DA598726525BB5009CE8A0 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
+				E1DA59BC265265CD009CE8A0 /* CRAlertVC.swift */,
+				E1DA59B4265265B4009CE8A0 /* CRAlertView.swift */,
 			);
 			path = Alerts;
 			sourceTree = "<group>";
@@ -197,6 +206,14 @@
 				E1DA59AF2652638F009CE8A0 /* CRFlagImageView.swift */,
 			);
 			path = ImageViews;
+			sourceTree = "<group>";
+		};
+		E1DA59C42652666A009CE8A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1DA59C52652666A009CE8A0 /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,8 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1DA59B5265265B4009CE8A0 /* CRAlertView.swift in Sources */,
 				E1DA593826524EA3009CE8A0 /* AppDelegate.swift in Sources */,
+				E1DA59C62652666A009CE8A0 /* UIViewController+Ext.swift in Sources */,
 				E1DA599626525C9C009CE8A0 /* CRTitleLabel.swift in Sources */,
+				E1DA59BD265265CD009CE8A0 /* CRAlertVC.swift in Sources */,
 				E1DA59A626525E37009CE8A0 /* CRButton.swift in Sources */,
 				E1DA5979265250D9009CE8A0 /* MainTableVC.swift in Sources */,
 				E1DA59B02652638F009CE8A0 /* CRFlagImageView.swift in Sources */,
