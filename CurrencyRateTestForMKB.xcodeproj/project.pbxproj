@@ -23,6 +23,10 @@
 		E1DA59B5265265B4009CE8A0 /* CRAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59B4265265B4009CE8A0 /* CRAlertView.swift */; };
 		E1DA59BD265265CD009CE8A0 /* CRAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59BC265265CD009CE8A0 /* CRAlertVC.swift */; };
 		E1DA59C62652666A009CE8A0 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59C52652666A009CE8A0 /* UIViewController+Ext.swift */; };
+		E1DA59CB26527B28009CE8A0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59CA26527B28009CE8A0 /* NetworkService.swift */; };
+		E1DA59D1265287A0009CE8A0 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59D0265287A0009CE8A0 /* Rate.swift */; };
+		E1DA59DD2653B6CE009CE8A0 /* RequestExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59DC2653B6CE009CE8A0 /* RequestExchangeRates.swift */; };
+		E1DA59E22653DD8A009CE8A0 /*  RateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59E12653DD8A009CE8A0 /*  RateResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		E1DA59B4265265B4009CE8A0 /* CRAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRAlertView.swift; sourceTree = "<group>"; };
 		E1DA59BC265265CD009CE8A0 /* CRAlertVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRAlertVC.swift; sourceTree = "<group>"; };
 		E1DA59C52652666A009CE8A0 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		E1DA59CA26527B28009CE8A0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E1DA59D0265287A0009CE8A0 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		E1DA59DC2653B6CE009CE8A0 /* RequestExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExchangeRates.swift; sourceTree = "<group>"; };
+		E1DA59E12653DD8A009CE8A0 /*  RateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " RateResponse.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,7 @@
 		E1DA593626524EA3009CE8A0 /* CurrencyRateTestForMKB */ = {
 			isa = PBXGroup;
 			children = (
+				E1DA59CF26528792009CE8A0 /* Models */,
 				E1DA59C42652666A009CE8A0 /* Extensions */,
 				E1DA598826525C0C009CE8A0 /* Custom Views */,
 				E1DA598726525BB5009CE8A0 /* Alerts */,
@@ -159,6 +168,7 @@
 		E1DA598126525944009CE8A0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E1DA59CA26527B28009CE8A0 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -214,6 +224,16 @@
 				E1DA59C52652666A009CE8A0 /* UIViewController+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1DA59CF26528792009CE8A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1DA59D0265287A0009CE8A0 /* Rate.swift */,
+				E1DA59E12653DD8A009CE8A0 /*  RateResponse.swift */,
+				E1DA59DC2653B6CE009CE8A0 /* RequestExchangeRates.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,14 +368,18 @@
 				E1DA59B5265265B4009CE8A0 /* CRAlertView.swift in Sources */,
 				E1DA593826524EA3009CE8A0 /* AppDelegate.swift in Sources */,
 				E1DA59C62652666A009CE8A0 /* UIViewController+Ext.swift in Sources */,
+				E1DA59D1265287A0009CE8A0 /* Rate.swift in Sources */,
 				E1DA599626525C9C009CE8A0 /* CRTitleLabel.swift in Sources */,
 				E1DA59BD265265CD009CE8A0 /* CRAlertVC.swift in Sources */,
 				E1DA59A626525E37009CE8A0 /* CRButton.swift in Sources */,
 				E1DA5979265250D9009CE8A0 /* MainTableVC.swift in Sources */,
 				E1DA59B02652638F009CE8A0 /* CRFlagImageView.swift in Sources */,
+				E1DA59E22653DD8A009CE8A0 /*  RateResponse.swift in Sources */,
 				E1DA599B26525CF4009CE8A0 /* CRBodyLabel.swift in Sources */,
 				E1DA593A26524EA3009CE8A0 /* SceneDelegate.swift in Sources */,
+				E1DA59DD2653B6CE009CE8A0 /* RequestExchangeRates.swift in Sources */,
 				E1DA59832652599B009CE8A0 /* CRErrors.swift in Sources */,
+				E1DA59CB26527B28009CE8A0 /* NetworkService.swift in Sources */,
 				E1DA59A026525D89009CE8A0 /* CRSecondaryTitleLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
