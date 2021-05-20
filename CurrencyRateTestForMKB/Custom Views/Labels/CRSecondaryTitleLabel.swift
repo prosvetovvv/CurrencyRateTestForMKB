@@ -20,8 +20,9 @@ class CRSecondaryTitleLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(fontSize: CGFloat) {
+    init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
         super.init(frame: .zero)
+        self.textAlignment = textAlignment
         font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
         setup()
     }

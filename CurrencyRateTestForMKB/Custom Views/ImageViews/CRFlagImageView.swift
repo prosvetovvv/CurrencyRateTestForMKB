@@ -8,7 +8,8 @@
 import UIKit
 
 class CRFlagImageView: UIImageView {
-    let placeholderImage = UIImage(systemName: "questionmark.square")
+    //let placeholderImage = UIImage(systemName: "questionmark.square")
+    //let flagImage: UIImage
     
     // MARK: - Init
     
@@ -21,12 +22,17 @@ class CRFlagImageView: UIImageView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    init(image: UIImage) {
+        super.init(frame: .zero)
+        self.image = image
+    }
+    
     // MARK: - Private
     
     private func setup() {
         layer.cornerRadius = 10
         clipsToBounds = true
-        image = placeholderImage
+        image = UIImage(systemName: "questionmark.square")
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

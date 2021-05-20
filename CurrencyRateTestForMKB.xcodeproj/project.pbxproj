@@ -27,6 +27,9 @@
 		E1DA59D1265287A0009CE8A0 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59D0265287A0009CE8A0 /* Rate.swift */; };
 		E1DA59DD2653B6CE009CE8A0 /* RequestExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59DC2653B6CE009CE8A0 /* RequestExchangeRates.swift */; };
 		E1DA59E22653DD8A009CE8A0 /*  RateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59E12653DD8A009CE8A0 /*  RateResponse.swift */; };
+		E1DA59EC2653E7DE009CE8A0 /* RateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59EB2653E7DE009CE8A0 /* RateCell.swift */; };
+		E1DA59F42655048B009CE8A0 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59F32655048B009CE8A0 /* String+Ext.swift */; };
+		E1DA59F926555046009CE8A0 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59F826555046009CE8A0 /* Constans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		E1DA59D0265287A0009CE8A0 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		E1DA59DC2653B6CE009CE8A0 /* RequestExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestExchangeRates.swift; sourceTree = "<group>"; };
 		E1DA59E12653DD8A009CE8A0 /*  RateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " RateResponse.swift"; sourceTree = "<group>"; };
+		E1DA59EB2653E7DE009CE8A0 /* RateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCell.swift; sourceTree = "<group>"; };
+		E1DA59F32655048B009CE8A0 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		E1DA59F826555046009CE8A0 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 		E1DA593626524EA3009CE8A0 /* CurrencyRateTestForMKB */ = {
 			isa = PBXGroup;
 			children = (
+				E1DA59E72653E754009CE8A0 /* Main */,
 				E1DA59CF26528792009CE8A0 /* Models */,
 				E1DA59C42652666A009CE8A0 /* Extensions */,
 				E1DA598826525C0C009CE8A0 /* Custom Views */,
@@ -132,7 +139,6 @@
 				E1DA593726524EA3009CE8A0 /* AppDelegate.swift */,
 				E1DA593926524EA3009CE8A0 /* SceneDelegate.swift */,
 				E1DA594026524EA4009CE8A0 /* Assets.xcassets */,
-				E1DA5978265250D9009CE8A0 /* MainTableVC.swift */,
 				E1DA594226524EA4009CE8A0 /* LaunchScreen.storyboard */,
 				E1DA594526524EA4009CE8A0 /* Info.plist */,
 			);
@@ -161,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				E1DA59822652599B009CE8A0 /* CRErrors.swift */,
+				E1DA59F826555046009CE8A0 /* Constans.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -222,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				E1DA59C52652666A009CE8A0 /* UIViewController+Ext.swift */,
+				E1DA59F32655048B009CE8A0 /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -234,6 +242,15 @@
 				E1DA59DC2653B6CE009CE8A0 /* RequestExchangeRates.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E1DA59E72653E754009CE8A0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E1DA5978265250D9009CE8A0 /* MainTableVC.swift */,
+				E1DA59EB2653E7DE009CE8A0 /* RateCell.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1DA59F42655048B009CE8A0 /* String+Ext.swift in Sources */,
 				E1DA59B5265265B4009CE8A0 /* CRAlertView.swift in Sources */,
 				E1DA593826524EA3009CE8A0 /* AppDelegate.swift in Sources */,
 				E1DA59C62652666A009CE8A0 /* UIViewController+Ext.swift in Sources */,
@@ -372,7 +390,9 @@
 				E1DA599626525C9C009CE8A0 /* CRTitleLabel.swift in Sources */,
 				E1DA59BD265265CD009CE8A0 /* CRAlertVC.swift in Sources */,
 				E1DA59A626525E37009CE8A0 /* CRButton.swift in Sources */,
+				E1DA59F926555046009CE8A0 /* Constans.swift in Sources */,
 				E1DA5979265250D9009CE8A0 /* MainTableVC.swift in Sources */,
+				E1DA59EC2653E7DE009CE8A0 /* RateCell.swift in Sources */,
 				E1DA59B02652638F009CE8A0 /* CRFlagImageView.swift in Sources */,
 				E1DA59E22653DD8A009CE8A0 /*  RateResponse.swift in Sources */,
 				E1DA599B26525CF4009CE8A0 /* CRBodyLabel.swift in Sources */,

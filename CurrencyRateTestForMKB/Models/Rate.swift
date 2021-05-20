@@ -8,16 +8,20 @@
 import Foundation
 
 struct Rate: Codable {
-    let tp: Int
-    let name: String
-    let from: Int
-    let currMnemFrom: CurrMnemFrom
-    let to: Int
-    let currMnemTo, basic, buy, sale: String
+    let tp, from, to: Int
+    let currencyCodeTo: String
+    let currencyCodeFrom: CurrencyCodes
+    let name, basic, buy, sale: String
     let deltaBuy, deltaSale: String
+    
+    enum CodingKeys: String, CodingKey {
+        case tp, name, from, to, basic, buy, sale, deltaBuy, deltaSale
+        case currencyCodeFrom = "currMnemFrom"
+        case currencyCodeTo = "currMnemTo"
+    }
 }
 
-enum CurrMnemFrom: String, Codable {
+enum CurrencyCodes: String, Codable {
     case eur = "EUR"
     case gbp = "GBP"
     case rur = "RUR"

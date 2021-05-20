@@ -20,10 +20,11 @@ class CRTitleLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
+    init(textAlignment: NSTextAlignment, fontSize: CGFloat, numberOfLines: Int) {
         super.init(frame: .zero)
         self.textAlignment = textAlignment
         self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
+        self.numberOfLines = numberOfLines
         setup()
     }
     
@@ -31,9 +32,12 @@ class CRTitleLabel: UILabel {
     
     private func setup() {
         textColor = .label
+        //numberOfLines = 2
+        lineBreakMode = .byWordWrapping
         adjustsFontSizeToFitWidth = true
-        minimumScaleFactor = 0.9
+        minimumScaleFactor = 0.7
         lineBreakMode = .byTruncatingTail
+        
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

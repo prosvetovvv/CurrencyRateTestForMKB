@@ -9,7 +9,7 @@ import UIKit
 
 class CRAlertView: UIView {
     let containerView = UIView()
-    let titleLabel = CRTitleLabel(textAlignment: .center, fontSize: 20)
+    let titleLabel = CRTitleLabel(textAlignment: .center, fontSize: 20, numberOfLines: 1)
     let messageLabel = CRBodyLabel(textAlignment: .center)
     let actionButton = CRButton(backgroundColor: .systemPink, title: "Ok")
     
