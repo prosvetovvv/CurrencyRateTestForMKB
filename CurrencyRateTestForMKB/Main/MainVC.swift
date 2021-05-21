@@ -78,6 +78,7 @@ extension MainVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currentRate = rates[indexPath.row]
         let detailVC = DetailVC(rate: currentRate)
+        
         detailVC.modalPresentationStyle = .overFullScreen
         detailVC.modalTransitionStyle = .crossDissolve
         present(detailVC, animated: true)

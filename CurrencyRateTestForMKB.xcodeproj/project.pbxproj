@@ -34,6 +34,7 @@
 		E1DA5A072656583B009CE8A0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA5A062656583B009CE8A0 /* DetailView.swift */; };
 		E1DA5A0C2656720B009CE8A0 /* CRPriceStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA5A0B2656720B009CE8A0 /* CRPriceStackView.swift */; };
 		E1DA5A17265698FB009CE8A0 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA5A16265698FB009CE8A0 /* DetailVC.swift */; };
+		E1DA5A302657C546009CE8A0 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA5A2F2657C546009CE8A0 /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		E1DA5A062656583B009CE8A0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E1DA5A0B2656720B009CE8A0 /* CRPriceStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRPriceStackView.swift; sourceTree = "<group>"; };
 		E1DA5A16265698FB009CE8A0 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		E1DA5A2F2657C546009CE8A0 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				E1DA59C52652666A009CE8A0 /* UIViewController+Ext.swift */,
+				E1DA5A2F2657C546009CE8A0 /* UIView+Ext.swift */,
 				E1DA59F32655048B009CE8A0 /* String+Ext.swift */,
 			);
 			path = Extensions;
@@ -386,6 +389,7 @@
 				E1DA599626525C9C009CE8A0 /* CRTitleLabel.swift in Sources */,
 				E1DA59BD265265CD009CE8A0 /* CRAlertVC.swift in Sources */,
 				E1DA59A626525E37009CE8A0 /* CRButton.swift in Sources */,
+				E1DA5A302657C546009CE8A0 /* UIView+Ext.swift in Sources */,
 				E1DA59F926555046009CE8A0 /* Constans.swift in Sources */,
 				E1DA5979265250D9009CE8A0 /* MainVC.swift in Sources */,
 				E1DA5A0C2656720B009CE8A0 /* CRPriceStackView.swift in Sources */,
