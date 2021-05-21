@@ -30,10 +30,10 @@ class CRSecondaryTitleLabel: UILabel {
     // MARK: - Private
     
     private func setup() {
-        textColor                   = .secondaryLabel
-        adjustsFontSizeToFitWidth   = true
-        minimumScaleFactor          = 0.90
-        lineBreakMode               = .byTruncatingTail
+        textColor = .secondaryLabel
+        adjustsFontSizeToFitWidth = true
+        minimumScaleFactor = 0.90
+        lineBreakMode = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

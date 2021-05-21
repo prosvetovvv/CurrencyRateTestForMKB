@@ -29,15 +29,14 @@ class RateCell: UITableViewCell {
     // MARK: - Public
     
     public func set(with rate: Rate) {
-        let countryCodeTo = getCountryCode(from: rate.currencyCodeTo)
         let deltaBuy = rate.deltaBuy.doubled()
         
-        flagImageView.image = UIImage(named: countryCodeTo) ?? UIImage(systemName: "questionmark.square")
+        flagImageView.image = UIImage(named: rate.country) ?? UIImage(systemName: "questionmark.square")
         
         nameCurrencyLabel.text = rate.name
         codeCurrencyLabel.text = rate.currencyCodeTo
         
-        buyPriceLabel.text = formattedPrice(with: rate.buy, code: rate.currencyCodeFrom)
+        buyPriceLabel.text = rate.buyPriceFormatted
         
         deltaBuyLabel.textColor = deltaBuy > 0 ? .systemPink : .systemGreen
         deltaBuyLabel.text = deltaBuy > 0 ? "+\(deltaBuy)" : "\(deltaBuy)"
@@ -55,28 +54,6 @@ class RateCell: UITableViewCell {
         addSubview(deltaBuyLabel)
         
         setNeedsUpdateConstraints()
-    }
-    
-    private func getCountryCode(from currencyCode: String) -> String {
-        String(currencyCode.prefix(2))
-    }
-    
-    private func formattedPrice(with price: String, code: CurrencyCodes) -> String {
-        switch code {
-        case .rur:
-            let price = price.doubled()
-            
-            return String(format: "%.2f₽", price)
-        default:
-            let formatter = NumberFormatter()
-            let price = NSNumber(value: price.doubled())
-            
-            formatter.numberStyle = .currency
-            formatter.currencyCode = code.rawValue
-            formatter.maximumFractionDigits = 2
-        
-            return formatter.string(from: price)!
-        }
     }
     
     // MARK: - Layout

@@ -8,8 +8,6 @@
 import UIKit
 
 class CRFlagImageView: UIImageView {
-    //let placeholderImage = UIImage(systemName: "questionmark.square")
-    //let flagImage: UIImage
     
     // MARK: - Init
     
@@ -32,7 +30,6 @@ class CRFlagImageView: UIImageView {
     private func setup() {
         layer.cornerRadius = 10
         clipsToBounds = true
-        image = UIImage(systemName: "questionmark.square")
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

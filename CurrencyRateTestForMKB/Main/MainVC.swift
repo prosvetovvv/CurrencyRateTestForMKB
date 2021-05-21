@@ -34,6 +34,7 @@ class MainVC: UIViewController {
     private func setupTableView() {
         rootView.tableView.register(RateCell.self, forCellReuseIdentifier: RateCell.reuseID)
         rootView.tableView.dataSource = self
+        rootView.tableView.delegate = self
     }
     
     private func getExchangeRates() {
@@ -70,5 +71,15 @@ extension MainVC: UITableViewDataSource {
         cell.set(with: rate)
         
         return cell
+    }
+}
+
+extension MainVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentRate = rates[indexPath.row]
+        let detailVC = DetailVC(rate: currentRate)
+        detailVC.modalPresentationStyle = .overFullScreen
+        detailVC.modalTransitionStyle = .crossDissolve
+        present(detailVC, animated: true)
     }
 }
