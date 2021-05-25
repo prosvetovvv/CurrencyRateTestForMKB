@@ -27,37 +27,3 @@ enum CurrencyCodes: String, Codable {
     case rur = "RUR"
     case usd = "USD"
 }
-
-extension Rate {
-    var country: String {
-        String(currencyCodeTo.prefix(2))
-    }
-    var buyPriceFormatted: String {
-        formatPrice(with: buy)
-    }
-
-    var salePriceFormatted: String {
-        formatPrice(with: sale)
-    }
-}
-
-extension Rate {
-
-    private func formatPrice(with price: String) -> String {
-        switch currencyCodeFrom {
-        case .rur:
-            let price = price.doubled()
-            return String(format: "%.2f ₽", price)
-            
-        default:
-            let price = NSNumber(value: price.doubled())
-            let formatter = NumberFormatter()
-            
-            formatter.numberStyle = .currency
-            formatter.currencyCode = currencyCodeFrom.rawValue
-            formatter.maximumFractionDigits = 2
-            
-            return formatter.string(from: price)!
-        }
-    }
-}

@@ -8,7 +8,7 @@
 import Foundation
 
 extension String {
-    func doubled() -> Double {
+    func convertToDouble() -> Double {
         (self as NSString).doubleValue
     }
 }

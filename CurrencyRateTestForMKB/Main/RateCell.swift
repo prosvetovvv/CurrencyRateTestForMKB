@@ -28,18 +28,18 @@ class RateCell: UITableViewCell {
     
     // MARK: - Public
     
-    public func set(with rate: Rate) {
-        let deltaBuy = rate.deltaBuy.doubled()
-        
+    public func set(with rate: FormattedRate) {
+        //let deltaBuy = rate.deltaBuy.convertToDouble()
+
         flagImageView.image = UIImage(named: rate.country) ?? UIImage(systemName: "questionmark.square")
         
-        nameCurrencyLabel.text = rate.name
-        codeCurrencyLabel.text = rate.currencyCodeTo
+        nameCurrencyLabel.text = rate.currencyName
+        codeCurrencyLabel.text = rate.currencyCode
         
-        buyPriceLabel.text = rate.buyPriceFormatted
+        buyPriceLabel.text = rate.buyPrice
         
-        deltaBuyLabel.textColor = deltaBuy > 0 ? .systemPink : .systemGreen
-        deltaBuyLabel.text = deltaBuy > 0 ? "+\(deltaBuy)" : "\(deltaBuy)"
+        deltaBuyLabel.textColor = rate.deltaBuy > 0 ? .systemPink : .systemGreen
+        deltaBuyLabel.text = rate.deltaBuy > 0 ? "+\(rate.deltaBuy)" : "\(rate.deltaBuy)"
     }
     
     // MARK: - Private

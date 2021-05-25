@@ -9,7 +9,7 @@ import UIKit
 
 class MainVC: UIViewController {
     private let rootView = RateView()
-    private var rates = [Rate]()
+    private var rates = [FormattedRate]()
     
     // MARK: - Lifecycle
     
@@ -42,13 +42,24 @@ class MainVC: UIViewController {
             switch result {
             case .success(let rates):
                 DispatchQueue.main.async {
-                    self.rates = rates
+                    self.rates = self.makeFormattedRates(from: rates)
                     self.rootView.tableView.reloadData()
                 }
             case .failure(let error):
                 self.presentCRAlertOnMainThread(title: "Что-то пошло не так", message: error.rawValue, buttonTitle: "Ok", completionHandler: nil)
             }
         }
+    }
+    
+    private func makeFormattedRates(from rates: [Rate]) -> [FormattedRate] {
+        var result = [FormattedRate]()
+        
+        rates.forEach {
+            let formattedRate = FormattedRate(with: $0)
+            result.append(formattedRate)
+        }
+        
+        return result
     }
 }
 

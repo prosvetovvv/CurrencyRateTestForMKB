@@ -29,12 +29,14 @@
 		E1DA59E22653DD8A009CE8A0 /* RateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59E12653DD8A009CE8A0 /* RateResponse.swift */; };
 		E1DA59EC2653E7DE009CE8A0 /* RateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59EB2653E7DE009CE8A0 /* RateCell.swift */; };
 		E1DA59F42655048B009CE8A0 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59F32655048B009CE8A0 /* String+Ext.swift */; };
-		E1DA59F926555046009CE8A0 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59F826555046009CE8A0 /* Constans.swift */; };
 		E1DA59FE26564E24009CE8A0 /* RateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA59FD26564E24009CE8A0 /* RateView.swift */; };
 		E1DA5A072656583B009CE8A0 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA5A062656583B009CE8A0 /* DetailView.swift */; };
 		E1DA5A0C2656720B009CE8A0 /* CRPriceStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA5A0B2656720B009CE8A0 /* CRPriceStackView.swift */; };
 		E1DA5A17265698FB009CE8A0 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA5A16265698FB009CE8A0 /* DetailVC.swift */; };
 		E1DA5A302657C546009CE8A0 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA5A2F2657C546009CE8A0 /* UIView+Ext.swift */; };
+		E1DA5A38265BE5E7009CE8A0 /* FormattedRateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA5A37265BE5E6009CE8A0 /* FormattedRateTests.swift */; };
+		E1DA5A48265CDC0B009CE8A0 /* FormattedRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA5A47265CDC0B009CE8A0 /* FormattedRate.swift */; };
+		E1DA5A50265D3D62009CE8A0 /* String+ExtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DA5A4F265D3D62009CE8A0 /* String+ExtTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,12 +85,14 @@
 		E1DA59E12653DD8A009CE8A0 /* RateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateResponse.swift; sourceTree = "<group>"; };
 		E1DA59EB2653E7DE009CE8A0 /* RateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCell.swift; sourceTree = "<group>"; };
 		E1DA59F32655048B009CE8A0 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
-		E1DA59F826555046009CE8A0 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		E1DA59FD26564E24009CE8A0 /* RateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateView.swift; sourceTree = "<group>"; };
 		E1DA5A062656583B009CE8A0 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E1DA5A0B2656720B009CE8A0 /* CRPriceStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRPriceStackView.swift; sourceTree = "<group>"; };
 		E1DA5A16265698FB009CE8A0 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		E1DA5A2F2657C546009CE8A0 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		E1DA5A37265BE5E6009CE8A0 /* FormattedRateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedRateTests.swift; sourceTree = "<group>"; };
+		E1DA5A47265CDC0B009CE8A0 /* FormattedRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedRate.swift; sourceTree = "<group>"; };
+		E1DA5A4F265D3D62009CE8A0 /* String+ExtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExtTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				E1DA594E26524EA4009CE8A0 /* CurrencyRateTestForMKBTests.swift */,
+				E1DA5A37265BE5E6009CE8A0 /* FormattedRateTests.swift */,
+				E1DA5A4F265D3D62009CE8A0 /* String+ExtTests.swift */,
 				E1DA595026524EA4009CE8A0 /* Info.plist */,
 			);
 			path = CurrencyRateTestForMKBTests;
@@ -178,7 +184,6 @@
 			isa = PBXGroup;
 			children = (
 				E1DA59822652599B009CE8A0 /* CRErrors.swift */,
-				E1DA59F826555046009CE8A0 /* Constans.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -227,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				E1DA59D0265287A0009CE8A0 /* Rate.swift */,
+				E1DA5A47265CDC0B009CE8A0 /* FormattedRate.swift */,
 				E1DA59E12653DD8A009CE8A0 /* RateResponse.swift */,
 				E1DA59DC2653B6CE009CE8A0 /* RequestExchangeRates.swift */,
 			);
@@ -390,13 +396,13 @@
 				E1DA59BD265265CD009CE8A0 /* CRAlertVC.swift in Sources */,
 				E1DA59A626525E37009CE8A0 /* CRButton.swift in Sources */,
 				E1DA5A302657C546009CE8A0 /* UIView+Ext.swift in Sources */,
-				E1DA59F926555046009CE8A0 /* Constans.swift in Sources */,
 				E1DA5979265250D9009CE8A0 /* MainVC.swift in Sources */,
 				E1DA5A0C2656720B009CE8A0 /* CRPriceStackView.swift in Sources */,
 				E1DA5A072656583B009CE8A0 /* DetailView.swift in Sources */,
 				E1DA59EC2653E7DE009CE8A0 /* RateCell.swift in Sources */,
 				E1DA59B02652638F009CE8A0 /* CRFlagImageView.swift in Sources */,
 				E1DA59E22653DD8A009CE8A0 /* RateResponse.swift in Sources */,
+				E1DA5A48265CDC0B009CE8A0 /* FormattedRate.swift in Sources */,
 				E1DA599B26525CF4009CE8A0 /* CRBodyLabel.swift in Sources */,
 				E1DA593A26524EA3009CE8A0 /* SceneDelegate.swift in Sources */,
 				E1DA59DD2653B6CE009CE8A0 /* RequestExchangeRates.swift in Sources */,
@@ -413,6 +419,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1DA594F26524EA4009CE8A0 /* CurrencyRateTestForMKBTests.swift in Sources */,
+				E1DA5A38265BE5E7009CE8A0 /* FormattedRateTests.swift in Sources */,
+				E1DA5A50265D3D62009CE8A0 /* String+ExtTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

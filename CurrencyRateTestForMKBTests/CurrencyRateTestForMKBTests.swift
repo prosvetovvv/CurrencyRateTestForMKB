@@ -6,7 +6,6 @@
 //
 
 import XCTest
-@testable import CurrencyRateTestForMKB
 
 class CurrencyRateTestForMKBTests: XCTestCase {
 
@@ -29,5 +28,4 @@ class CurrencyRateTestForMKBTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

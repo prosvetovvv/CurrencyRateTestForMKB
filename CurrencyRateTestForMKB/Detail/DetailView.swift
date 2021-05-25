@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailView: UIView {
-    private let rate: Rate
+    private let rate: FormattedRate
     private let containerView = UIView()
     private let flagImageView = UIImageView()
     private let nameTitleLabel = CRTitleLabel(textAlignment: .center, fontSize: 25, numberOfLines: 2)
@@ -18,7 +18,7 @@ class DetailView: UIView {
     
     // MARK: - Init
     
-    init(rate: Rate) {
+    init(rate: FormattedRate) {
         self.rate = rate
         super.init(frame: .zero)
         setup()
@@ -66,19 +66,19 @@ class DetailView: UIView {
     }
     
     private func setupNameTitle() {
-        nameTitleLabel.text = rate.name
+        nameTitleLabel.text = rate.currencyName
         
         containerView.addSubview(nameTitleLabel)
     }
     
     private func setupBuyStackView() {
-        buyStackView.set(title: "Продажа", price: rate.buyPriceFormatted, delta: rate.deltaBuy.doubled())
+        buyStackView.set(title: "Продажа", price: rate.buyPrice, delta: rate.deltaBuy)
         
         containerView.addSubview(buyStackView)
     }
     
     private func setupSaleStackView() {
-        saleStackView.set(title: "Покупка", price: rate.salePriceFormatted, delta: rate.deltaSale.doubled())
+        saleStackView.set(title: "Покупка", price: rate.salePrice, delta: rate.deltaSale)
         
         containerView.addSubview(saleStackView)
     }

@@ -12,7 +12,7 @@ class DetailVC: UIViewController {
     
     // MARK: - Init
     
-    init(rate: Rate) {
+    init(rate: FormattedRate) {
         self.rootView = DetailView(rate: rate)
         super.init(nibName: nil, bundle: nil)
     }
