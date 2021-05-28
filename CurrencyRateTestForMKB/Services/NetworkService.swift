@@ -7,10 +7,10 @@
 
 import Foundation
 
-class NetworkService {
+class NetworkService: Networking {
     static let shared = NetworkService()
     private let url = "https://alpha.as50464.net:29870/moby-pre-44/core?r=BEYkZbmV&d=563B4852-6D4B-49D6-A86E-B273DD520FD2&t=ExchangeRates&v=44"
-    
+        
     private init() {}
     
     func getExchangeRates(completion: @escaping (Result<[Rate], CRError>) -> Void) {

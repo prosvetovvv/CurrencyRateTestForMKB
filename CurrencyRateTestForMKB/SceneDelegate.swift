@@ -11,11 +11,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowsScene = (scene as? UIWindowScene) else { return }
         
-        let mainTableVC = MainVC()
+        let providerFactory = ProviderFactory()
+        let rateProvider = providerFactory.makeRateProvider()
+        
+        let rateViewModel = RateViewModel(service: rateProvider)
+        
+        let mainTableVC = RateVC(viewModel: rateViewModel)
         
         window = UIWindow(frame: windowsScene.coordinateSpace.bounds)
         window?.windowScene = windowsScene
