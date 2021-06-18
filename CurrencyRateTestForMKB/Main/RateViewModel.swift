@@ -10,7 +10,7 @@ import Foundation
 class RateViewModel {
     private let service: RateProviding
     private var rateResponse: RateResponse?
-    public var rates = [FormattedRate]()
+    public var formattedRates = [FormattedRate]()
     public var onRateUpdate: () -> Void = {}
     
     // MARK: - Init
@@ -23,32 +23,15 @@ class RateViewModel {
     
     public func fetch() {
         service.getRate { result in
-            
-            
             switch result {
             case .success(let response):
                 DispatchQueue.main.async {
-
-                    //self.rates = response.rates
-                    self.rates = self.formatRates(response.rates)
+                    self.formattedRates = response.rates.map { FormattedRate(with: $0) }
                     self.onRateUpdate()
                 }
             case .failure(let error):
                 debugPrint(error)
             }
         }
-    }
-    
-    // MARK: - Private
-    
-    private func formatRates(_ rates: [Rate]) -> [FormattedRate] {
-        var result = [FormattedRate]()
-        
-        rates.forEach {
-            let formattedRate = FormattedRate(with: $0)
-            result.append(formattedRate)
-        }
-        
-        return result
     }
 }

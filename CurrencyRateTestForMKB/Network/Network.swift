@@ -7,13 +7,10 @@
 
 import Foundation
 
-struct Network: Networking {
-    
-}
+struct Network: Networking { }
 
 struct RateProvider: RateProviding {
     var network: Networking
-
 }
 
 

@@ -8,31 +8,31 @@
 import Foundation
 
 protocol Networking {
-    func execute<T: Decodable>(_ requestProvider: RequestProviding, completion: @escaping (Result<T, Error>) -> Void)
+    func execute<T: Decodable>(_ requestProvider: RequestProviding, completion: @escaping (Result<T, CRError>) -> Void)
 }
 
 extension Networking {
-    func execute<T: Decodable>(_ requestProvider: RequestProviding, completion: @escaping (Result<T, Error>) -> Void) {
+    func execute<T: Decodable>(_ requestProvider: RequestProviding, completion: @escaping (Result<T, CRError>) -> Void) {
         let urlRequest = requestProvider.urlRequest
         
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in
             do {
-                if let error = error {
-                    completion(.failure(error))
+                if let _ = error {
+                    completion(.failure(.unableToComplete))
                     return
                 }
                 
                 guard let data = data else {
-                    preconditionFailure("No error was received but we also don't have data...")
+                    completion(.failure(.invalidResponse))
+                    return
                 }
                 
                 let decodedObject = try JSONDecoder().decode(T.self, from: data)
                 
                 completion(.success(decodedObject))
             } catch {
-                completion(.failure(error))
+                completion(.failure(.invalidData))
             }
         } .resume()
-        //task.resume()
     }
 }

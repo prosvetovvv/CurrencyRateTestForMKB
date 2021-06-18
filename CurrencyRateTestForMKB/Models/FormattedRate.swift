@@ -7,20 +7,7 @@
 
 import Foundation
 
-protocol FormattedRateProtocol {
-    var currencyName: String { get set }
-    var country: String { get set }
-    var currencyCode: String { get set }
-    var buyPrice: String { get set }
-    var salePrice: String { get set }
-    var deltaBuy: Double { get set }
-    var deltaSale: Double { get set }
-    
-    func getCountryCode(from currencyCode: String) -> String
-    func formatPrice(input: String, currency: CurrencyCodes) -> String
-}
-
-struct FormattedRate: FormattedRateProtocol {
+struct FormattedRate {
     var currencyName = ""
     var country = ""
     var currencyCode = ""
@@ -57,7 +44,7 @@ struct FormattedRate: FormattedRateProtocol {
 }
 
 extension FormattedRate {
-    init(with rate: Rate) {
+    init(with rate: RawRate) {
         self.currencyName = rate.name
         self.country = getCountryCode(from: rate.currencyCodeTo)
         self.currencyCode = rate.currencyCodeTo

@@ -22,7 +22,7 @@ class RateView: UIView {
     
     // MARK: - Private
     
-    func setupSelf() {
+    private func setupSelf() {
         tableView.rowHeight = 95
         tableView.translatesAutoresizingMaskIntoConstraints = false
         

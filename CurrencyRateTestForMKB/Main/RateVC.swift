@@ -7,15 +7,21 @@
 
 import UIKit
 
+protocol ShowingLoadingSpinner {
+    var spinnerView: LoadingSpinnerView { get }
+    
+    func showSpinnerView()
+}
+
 class RateVC: UIViewController {
-    private let rateViewModel: RateViewModel
+    private let viewModel: RateViewModel
     private let rootView = RateView()
-    private var rates = [FormattedRate]()
+    private var formattedRates = [FormattedRate]()
     
     // MARK: - Init
     
     init(viewModel: RateViewModel) {
-        self.rateViewModel = viewModel
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -50,40 +56,17 @@ class RateVC: UIViewController {
     }
     
     private func getExchangeRates() {
-        
-        rateViewModel.fetch()
-        rateViewModel.onRateUpdate = {
-            self.rates = self.rateViewModel.rates
+        showSpinnerView()
+        viewModel.fetch()
+        viewModel.onRateUpdate = {
+            self.formattedRates = self.viewModel.formattedRates
             self.rootView.tableView.reloadData()
+            self.dismissSpinnerView()
         }
-        
-        
-//        NetworkService.shared.getExchangeRates { result in
-//            switch result {
-//            case .success(let rates):
-//                DispatchQueue.main.async {
-//                    self.rates = self.makeFormattedRates(from: rates)
-//                    self.rootView.tableView.reloadData()
-//                }
-//            case .failure(let error):
-//                self.presentCRAlertOnMainThread(title: "Что-то пошло не так", message: error.rawValue, buttonTitle: "Ok", completionHandler: nil)
-//            }
-//        }
     }
-    
-//    private func makeFormattedRates(from rates: [Rate]) -> [FormattedRate] {
-//        var result = [FormattedRate]()
-//
-//        rates.forEach {
-//            let formattedRate = FormattedRate(with: $0)
-//            result.append(formattedRate)
-//        }
-//
-//        return result
-//    }
 }
 
-// MARK: - Extensions
+// MARK: - Table view date source
 
 extension RateVC: UITableViewDataSource {
     
@@ -92,11 +75,11 @@ extension RateVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        rates.count
+        formattedRates.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let rate = rates[indexPath.row]
+        let rate = formattedRates[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: RateCell.reuseID, for: indexPath) as! RateCell
         
         cell.set(with: rate)
@@ -105,9 +88,11 @@ extension RateVC: UITableViewDataSource {
     }
 }
 
+// MARK: - Table view delegate
+
 extension RateVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let currentRate = rates[indexPath.row]
+        let currentRate = formattedRates[indexPath.row]
         let detailVC = DetailVC(rate: currentRate)
         
         detailVC.modalPresentationStyle = .overFullScreen

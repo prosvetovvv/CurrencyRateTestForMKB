@@ -14,11 +14,11 @@ enum Endpoint {
 protocol RateProviding {
     var network: Networking { get }
     
-    func getRate(_ completion: @escaping (Result<RateResponse, Error>) -> Void)
+    func getRate(_ completion: @escaping (Result<RateResponse, CRError>) -> Void)
 }
 
-extension RateProviding {
-    func getRate(_ completion: @escaping (Result<RateResponse, Error>) -> Void) {
+extension RateProviding {    
+    func getRate(_ completion: @escaping (Result<RateResponse, CRError>) -> Void) {
         network.execute(Endpoint.rates, completion: completion)
     }
 }

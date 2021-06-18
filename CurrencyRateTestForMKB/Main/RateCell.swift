@@ -29,8 +29,6 @@ class RateCell: UITableViewCell {
     // MARK: - Public
     
     public func set(with rate: FormattedRate) {
-        //let deltaBuy = rate.deltaBuy.convertToDouble()
-
         flagImageView.image = UIImage(named: rate.country) ?? UIImage(systemName: "questionmark.square")
         
         nameCurrencyLabel.text = rate.currencyName

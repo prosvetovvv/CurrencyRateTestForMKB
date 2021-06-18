@@ -14,8 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowsScene = (scene as? UIWindowScene) else { return }
         
-        let providerFactory = ProviderFactory()
-        let rateProvider = providerFactory.makeRateProvider()
+        let network = Network()
+        let rateProvider = RateProvider(network: network)
         
         let rateViewModel = RateViewModel(service: rateProvider)
         

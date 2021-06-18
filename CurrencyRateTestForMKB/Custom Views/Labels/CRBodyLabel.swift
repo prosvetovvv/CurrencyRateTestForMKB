@@ -1,5 +1,5 @@
 //
-//  CRSecondaryTitleLabel.swift
+//  CRBodyLabel.swift
 //  CurrencyRateTestForMKB
 //
 //  Created by Vitaly Prosvetov on 17.05.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CRSecondaryTitleLabel: UILabel {
+class CRBodyLabel: UILabel {
     
     // MARK: - Init
     
@@ -20,20 +20,19 @@ class CRSecondaryTitleLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
-        super.init(frame: .zero)
+    convenience init(textAlignment: NSTextAlignment) {
+        self.init(frame: .zero)
         self.textAlignment = textAlignment
-        font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
-        setup()
     }
     
     // MARK: - Private
     
     private func setup() {
         textColor = .secondaryLabel
+        font = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontSizeToFitWidth = true
-        minimumScaleFactor = 0.90
-        lineBreakMode = .byTruncatingTail
+        minimumScaleFactor = 0.75
+        lineBreakMode = .byWordWrapping
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

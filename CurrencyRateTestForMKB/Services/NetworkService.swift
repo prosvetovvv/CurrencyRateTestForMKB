@@ -13,7 +13,7 @@ class NetworkService: Networking {
         
     private init() {}
     
-    func getExchangeRates(completion: @escaping (Result<[Rate], CRError>) -> Void) {
+    func getExchangeRates(completion: @escaping (Result<[RawRate], CRError>) -> Void) {
         guard let url = URL(string: url) else {
             completion(.failure(.unableToComplete))
             return
