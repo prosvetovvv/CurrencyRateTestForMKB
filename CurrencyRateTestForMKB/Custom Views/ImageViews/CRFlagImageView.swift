@@ -30,6 +30,7 @@ class CRFlagImageView: UIImageView {
     private func setup() {
         layer.cornerRadius = 10
         clipsToBounds = true
+        contentMode = .scaleAspectFit
         translatesAutoresizingMaskIntoConstraints = false
     }
 }
